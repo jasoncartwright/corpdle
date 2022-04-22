@@ -3,6 +3,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="theme-color" content="#000000"/>
+<meta name="description" content="Wordle for S&P 500 companies">
 <link rel="stylesheet" type="text/css" href="styles.css">
 
 <title>Corpdle</title>
@@ -10,7 +11,7 @@
 <div id="container">
 
     <header>
-        <h1>💲 Corpdle</h1>
+        <h1><span>$</span> Corpdle</h1>
         <p>Wordle for S&amp;P 500 companies</p>
     </header>
 
@@ -19,6 +20,16 @@
         <dd class="price" id="price"></dd>
         <dt class="marketcap">Market Cap</dt>
         <dd class="marketcap" id="marketcap"></dd>
+        <dt class="high52">52-week high</dt>
+        <dd class="high52" id="high52"></dd>
+        <dt class="low52">52-week low</dt>
+        <dd class="low52" id="low52"></dd>
+        <dt class="volume">Volume</dt>
+        <dd class="volume" id="volume"></dd>
+        <dt class="pe">P/E</dt>
+        <dd class="pe" id="pe"></dd>
+        <dt class="eps">EPS</dt>
+        <dd class="eps" id="eps"></dd>
         <dt class="sector">Sector</dt>
         <dd class="sector" id="sector"></dd>
         <dt class="subsector">Subsector</dt>
@@ -29,13 +40,17 @@
         <dd class="founded" id="founded"></dd>
         <dt class="added">Date Added</dt>
         <dd class="added" id="added"></dd>
+        <dt class="firstchar">First Letter</dt>
+        <dd class="firstchar" id="firstchar"></dd>
     </dl>
 
-    <div id="win">Good work! The company is <span class="correct_company_name"></span></div>
-    <div id="lose">Sorry, you didn't guess correctly today. The company is <span class="correct_company_name"></span>.</div>
+    <div id="win">✔️ Good work! The company is <span class="correct_company_name"></span></div>
+    <div id="lose">❌ Sorry, you didn't guess correctly today. The company is <span class="correct_company_name"></span>.</div>
 
     <input name="company" list="companies" placeholder="Name or ticker" id="guess_entry"><input type="submit" value="Guess" id="guess">
     <datalist id="companies"></datalist>
+
+    <p id="clue_tally">Clue number <span id="guess_number">1</span> of <span id="number_of_guesses"></span></p>
 
     <footer>
         <p id="disclaimer">Share price and market capitalisation delayed ~20min</p>

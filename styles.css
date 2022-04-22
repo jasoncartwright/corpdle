@@ -10,11 +10,23 @@ body {
     margin: 0 auto;
     padding: 10px;
 }
+header {
+    border-bottom:1px solid #aaa;
+}
+h1 {
+    display:inline-block;
+}
+h1 span {
+    color: green;
+}
+header p {
+    padding-left:30px;
+    display:inline-block;
+}
 
 dl {
     display: grid;
     grid-template-columns: max-content auto;
-    font-size:1.2em;
 }
 dt {
     grid-column-start: 1;
@@ -23,7 +35,7 @@ dd {
     grid-column-start: 2;
     font-weight:bold;
 }
-.marketcap, .sector, .subsector, .hq, .founded, .added {
+dl dd:not(:first-of-type), dl dt:not(:first-of-type) {
     display:none;
 }
 #win, #lose {
