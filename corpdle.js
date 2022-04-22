@@ -11,6 +11,9 @@ const clue_tally = document.getElementById("clue_tally")
 var correct_company
 var guess_number = 1
 
+// Number of guesses
+document.getElementById("number_of_guesses").innerText = number_of_guesses
+
 // Get the company data CSV
 Papa.parse(csv_url, {  
     download: true,
@@ -52,8 +55,6 @@ function start_game(companies) {
             element.innerHTML = correct_company_guess
         }
     );
-    // Number of guesses
-    document.getElementById("number_of_guesses").innerText = number_of_guesses
 
     // Handle guess button and enter key
     guess_btn.addEventListener("click", do_guess)
