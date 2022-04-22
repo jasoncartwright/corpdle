@@ -14,14 +14,10 @@ header {
     border-bottom:1px solid #aaa;
 }
 h1 {
-    display:inline-block;
+    margin-top:10px;
 }
 h1 span {
     color: green;
-}
-header p {
-    padding-left:20px;
-    display:inline-block;
 }
 
 dl {
