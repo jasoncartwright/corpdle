@@ -79,7 +79,6 @@ function do_guess() {
     } else {
 
         // Got it wrong
-
         if (guess_number == number_of_guesses) {
 
             // Out of guesses
