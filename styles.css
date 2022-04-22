@@ -43,7 +43,8 @@ dl dd:not(:first-of-type), dl dt:not(:first-of-type) {
 }
 
 input {
-    font-size:1.2em;
+    font-size:1.1em;
+    padding:5px;
 }
 #guess_entry {
     width:75%;
