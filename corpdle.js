@@ -90,6 +90,7 @@ function do_guess() {
         } else {
 
             // Next guess
+            document.getElementById("wrong_answer").style.display = "inline";
             guess_entry.value = ""
             guess_number++
             document.getElementById("guess_number").innerText = guess_number
