@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#000000"/>
 <link rel="stylesheet" type="text/css" href="styles.css">
 
 <title>Corpdle</title>
@@ -8,7 +10,7 @@
 <div id="container">
 
     <header>
-        <h1>Corpdle</h1>
+        <h1>💲 Corpdle</h1>
         <p>Wordle for S&amp;P 500 companies</p>
     </header>
 
@@ -19,13 +21,20 @@
         <dd class="marketcap" id="marketcap"></dd>
         <dt class="sector">Sector</dt>
         <dd class="sector" id="sector"></dd>
-        <dt class="founded">Date Founded</dt>
+        <dt class="subsector">Subsector</dt>
+        <dd class="subsector" id="subsector"></dd>
+        <dt class="hq">Headquarters</dt>
+        <dd class="hq" id="hq"></dd>
+        <dt class="founded">Year Founded</dt>
         <dd class="founded" id="founded"></dd>
         <dt class="added">Date Added</dt>
         <dd class="added" id="added"></dd>
     </dl>
 
-    <input name="company" list="companies" placeholder="Name or ticker" id="company"><input type="submit" value="Guess" id="guess">
+    <div id="win">Good work! The company is <span class="correct_company_name"></span></div>
+    <div id="lose">Sorry, you didn't guess correctly today. The company is <span class="correct_company_name"></span>.</div>
+
+    <input name="company" list="companies" placeholder="Name or ticker" id="guess_entry"><input type="submit" value="Guess" id="guess">
     <datalist id="companies"></datalist>
 
     <footer>

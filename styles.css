@@ -7,7 +7,7 @@ body {
 }
 #container {
     max-width: 600px;
-    margin: 0 auto;
+    margin: 0 10px;
 }
 
 dl {
@@ -22,18 +22,24 @@ dd {
     grid-column-start: 2;
     font-weight:bold;
 }
-.marketcap, .sector, .founded, .added {
+.marketcap, .sector, .subsector, .hq, .founded, .added {
+    display:none;
+}
+#win, #lose {
     display:none;
 }
 
 input {
     font-size:1.2em;
 }
-#company {
+#guess_entry {
     width:75%;
 }
 #guess {
-    width:23%;
+    width:20%;
+}
+.correct_company_name {
+    font-style: italic;
 }
 
 footer {
