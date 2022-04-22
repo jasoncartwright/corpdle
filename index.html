@@ -1,14 +1,41 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <meta charset="utf-8">
-<style>
-html {background:#eee;font-family:sans-serif;font-size:0.9em}
-body {margin:0;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
-</style>
+<link rel="stylesheet" type="text/css" href="styles.css">
+
 <title>Corpdle</title>
-hello
+
+<div id="container">
+
+    <header>
+        <h1>Corpdle</h1>
+        <p>Wordle for S&amp;P 500 companies</p>
+    </header>
+
+    <dl id="clues">
+        <dt class="price">Share Price</dt>
+        <dd class="price" id="price"></dd>
+        <dt class="marketcap">Market Cap</dt>
+        <dd class="marketcap" id="marketcap"></dd>
+        <dt class="sector">Sector</dt>
+        <dd class="sector" id="sector"></dd>
+        <dt class="founded">Date Founded</dt>
+        <dd class="founded" id="founded"></dd>
+        <dt class="added">Date Added</dt>
+        <dd class="added" id="added"></dd>
+    </dl>
+
+    <input name="company" list="companies" placeholder="Name or ticker" id="company"><input type="submit" value="Guess" id="guess">
+    <datalist id="companies"></datalist>
+
+    <footer>
+        <p id="disclaimer">Share price and market capitalisation delayed ~20min</p>
+        <p>Made by <a href="https://www.jasoncartwright.com">Jason Cartwright</a></p>
+    </footer>
+
+</div>
+
 <script src="papaparse.min.js"></script>
 <script src="corpdle.js"></script>
-<script defer data-domain="corpdle.com" src="https://plausible.io/js/plausible.outbound-links.js"></script>
+
 </html>
