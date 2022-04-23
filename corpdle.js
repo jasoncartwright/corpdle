@@ -34,7 +34,7 @@ function start_game(companies) {
 
     // Get the company info
     today = new Date()
-    day_number = Math.ceil((start_date.getTime() - today.getTime()) / (1000 * 3600 * 24))
+    day_number = Math.ceil((today.getTime() - start_date.getTime()) / (1000 * 3600 * 24))
     random_company_row_number = random_order[day_number]
     company = companies[random_company_row_number]
     correct_company_guess = company.name + " (" + company.ticker + ")"
